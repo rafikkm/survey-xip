@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Potenza - Job Application Form Wizard with Resume upload and Branch feature">
     <meta name="author" content="Ansonika">
-    <title>Potenza | Job Application Form Wizard by Ansonika</title>
+    <title>XIP -FORM ONLINE</title>
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -37,17 +37,57 @@
 </head>
 <body style="background-color:#fff;" onLoad="setTimeout('delayedRedirect()', 5000)">
 <?php
+
+	
+	$servername = "localhost";
+    $username = "root";
+    $password = "070206682rR";
+    $dbname = "xip";
+  
+    // Create connection
+   
+   
+   
+   $mysqli = new mysqli($servername, $username, $password, $dbname);
+
+   if($mysqli->connect_error) {
+   exit('Error connecting to database'); //Should be a message a typical user could understand in production
+   }
+   
+    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+    $mysqli->set_charset("utf8mb4");
+
+  
+// Check connection
+
+
+
+
+	
+
 	$mail = $_POST['email'];
 
-	$to = "email@yourdomain.com";/* YOUR EMAIL HERE */
-	$subject = "Job application from Potenza";
-	$headers = "From: Job application from Potenza <noreply@yourdomain.com>";
+
+
+	$to = "rafik.km@gmail.com";/* YOUR EMAIL HERE */
+	$subject = "Allo Khedma Survey";
+	$headers = "From: Allo Khedma Survey";
 
 	$message  = "PRESENTATION\n";
-	$message .= "\nFirst and Last Name: " . $_POST['name'];
+	$message .= "\n<b>First Name: " . $_POST['fname'];
+	$message .= "\nLast Name: " . $_POST['lname'];
 	$message .= "\nEmail: " . $_POST['email'];
 	$message .= "\nTelephone: " . $_POST['phone'];
-	$message .= "\nGender: " . $_POST['gender'];				
+	$message .= "\nGender: " . $_POST['gender'];	
+    $message .= "\nCountry: " . $_POST['country'];	
+	$message .= "\nRegion: " . $_POST['region'];
+	$message .= "\nCity: " . $_POST['city'];
+	$message .= "\nAddress: " . $_POST['Adresse'];
+	$message .= "\nDiplome: " . $_POST['diplome'];
+	$message .= "\nGraduation Date: " . $_POST['graddate'];
+	$message .= "\nCertifications: " . $_POST['certification'];
+	$message .= "\nExperience: " . $_POST['experience'];
+	
 	
 	/* FILE UPLOAD */
 	if(isset($_FILES['fileupload'])){
@@ -74,37 +114,64 @@
 		}
 		if(empty($errors)==true){
 			move_uploaded_file($file_tmp,"upload_files/".$FinalFilename);
-			$message .= "\nResume: http://www.yourdomain.com/upload_files/".$FinalFilename; // Write here the path of your upload_files folder
+		/*	$message .= "\nResume: http://www.yourdomain.com/upload_files/".$FinalFilename; */ // Write here the path of your upload_files folder
+			
 		}else{
-			$message .= "\nFile name: no files uploaded";
+			/*$message .= "\nFile name: no files uploaded";*/
 			}
 		};
+		
+		
 		/* end FILE UPLOAD */
+		
+	
+		$message .= "\nEtes vous a la recherche?: " . $_POST['availability'];
 
-		$message .= "\n\nWORK AVAILABILITY";
-		$message .= "\nAre you available for work: " . $_POST['availability'];
+		if (isset($_POST['searchtime']) && $_POST['searchtime'] != "")
+			{
+				$message .= "\nDepuis combien de temps êtes-vous à la recherche d’emploi ?: " . $_POST['searchtime'];
+				$message .= "\nA combien d’offres d’emploi avez vous postulé ? " . $_POST['offers'];
+				$message .= "\nCombien d’entretiens d’embauche avez-vous effectué ?" . $_POST['entretiens'];
+			}
+			
+			
+			
+			
+			
+			
+		if (isset($_POST['cursus']) && $_POST['cursus'] != "")
+			{
+				$message .= "\nDéfinissez ce qui vous manque dans votre cursus actuel ?" . $_POST['cursus'];
+			}
+			
+			
+			
+			
+			
+			
+		if (isset($_POST['qualitycv']) && $_POST['qualitycv'] != "")
+			{
+				$message .= "\nSi vous deviez définir la qualité de votre CV ?" . $_POST['qualitycv'];
+				$message .= "\nAvez vous un profil LinkedIn ?" . $_POST['profilelinkedin'];
+				$message .= "\nAvez vous défini votre projet professionnel ?" . $_POST['proproject'];
 
-		if (isset($_POST['minimum_salary_full_time']) && $_POST['minimum_salary_full_time'] != "")
-			{
-				$message .= "\nMinimum salary: " . $_POST['minimum_salary_full_time'];
-				$message .= "\nHow soon would you be looking to start? " . $_POST['start_availability_full_time'];
-				$message .= "\nAre you willing to work remotely? " . $_POST['remotely_full_time'];
 			}
-		if (isset($_POST['minimum_salary_part_time']) && $_POST['minimum_salary_part_time'] != "")
-			{
-				$message .= "\nMinimum salary: " . $_POST['minimum_salary_part_time'];
-				$message .= "\nHow soon would you be looking to start? " . $_POST['start_availability_part_time'];
-				$message .= "\nWhen you prefer to work? " . $_POST['day_preference_part_time'];
-			}
-		if (isset($_POST['fixed_rate_contract']) && $_POST['fixed_rate_contract'] != "")
-			{
-				$message .= "\nMinimum fixed rate: " . $_POST['fixed_rate_contract'];
-				$message .= "\nMinimum hourly rate: " . $_POST['hourly_rate_contract'];
-				$message .= "\nMinimum hours for a contract: " . $_POST['minimum_hours_conctract'];
-				$message .= "\nAre you willing to work remotely? " . $_POST['remotely_contract'];
-			}
+			
+			
+			
 						
 		$message .= "\n\nTerms and conditions accepted: " . $_POST['terms'];
+		
+		
+		$stmt = $mysqli->prepare("INSERT INTO survey (first_name,last_name,Email,Telephone,Gender,Country,Region,City,Address,Diplome,Graduation_Date,Certifications,Experience,Resume,recherche,searchtime,offers,entretiens,cursus,qualitycv,profilelinkedin,proproject) 
+		VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssssssssssssssssssss", $_POST['fname'], $_POST['lname'], $_POST['email'],$_POST['phone'],$_POST['gender'],$_POST['country'],
+		$_POST['region'],$_POST['city'],$_POST['Adresse'],$_POST['diplome'],$_POST['graddate'],
+		$_POST['certification'],$_POST['experience'],$filelocation,$_POST['availability'],$_POST['searchtime'],$_POST['offers'],$_POST['entretiens'],$_POST['cursus'],$_POST['qualitycv'],$_POST['profilelinkedin'],$_POST['proproject']);
+        $stmt->execute();
+        $stmt->close();
+		
+		
 												
 		//Receive Variable
 		$sentOk = mail($to,$subject,$message,$headers);
@@ -112,11 +179,11 @@
 		//Confirmation page
 		$user = "$mail";
 		$usersubject = "Thank You";
-		$userheaders = "From: Job application from Potenza <noreply@yourdomain.com>";
+		$userheaders = "From: Allo Khedma Survey <noreply@yourdomain.com>";
 		/*$usermessage = "Thank you for your time. Your quotation request is successfully submitted.\n"; WITHOUT SUMMARY*/
 						
 		//Confirmation page WITH  SUMMARY
-		$usermessage = "Thank you for your time. Your application is successfully submitted. We will reply shortly.\n\nBELOW A SUMMARY\n\n$message"; 
+		$usermessage = "Thank you for your time. Your application is successfully submitted. We will reply soon.\n\nBELOW A SUMMARY\n\n$message"; 
 		mail($user,$usersubject,$usermessage,$userheaders);
 	
 ?>

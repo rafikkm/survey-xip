@@ -52,16 +52,15 @@
 	                <div id="social">
 	                    <ul>
 	                        <li><a style="color:#123c61;" href="#0"><i class="icon-facebook"></i></a></li>
-	                        <li><a style="color:#123c61;" href="#0"><i class="icon-twitter"></i></a></li>
-	                        <li><a style="color:#123c61;" href="#0"><i class="icon-google"></i></a></li>
+	                        <li><a style="color:#123c61;" href="#0"><i class="icon-instagram"></i></a></li>
 	                        <li><a style="color:#123c61;" href="#0"><i class="icon-linkedin"></i></a></li>
 	                    </ul>
 	                </div>
 	                <!-- /social -->
 	                <div>
-	                    <figure><img src="img/XIP.png" alt="" class="img-fluid"></figure>
-	                    <h2 style="color:#123c61">We are Hiring</h2>
-	                    <p style="color:#123c61">Tation argumentum et usu, dicit viderer evertitur te has. Eu dictas concludaturque usu, facete detracto patrioque an per, lucilius pertinacia eu vel.</p>
+	                    <figure><img src="img/Allo-Khedma.png" alt="" class="img-fluid"></figure>
+	                    <h2 style="color:#123c61">La Hotline qui vous accompagne lors de votre recherche d’emploi.</h2>
+	                    <p style="color:#123c61">Des conseils et des outils mis à la disposition des jeunes pour leurs permettre de valoriser leurs profils sur le marché de l’emploi.</p>
 	               
 	                </div>
 	            
@@ -81,8 +80,8 @@
 	                    <!-- Leave for security protection, read docs for details -->
 	                    <div id="middle-wizard">
 	                        <div class="step">
-	                            <h2 class="section_title">XIP</h2>
-	                            <h3 class="main_question">Personal info</h3>
+	                            <h2 class="section_title">Allo Khedma</h2>
+	                            <h3 class="main_question">Informations personnelles</h3>
 	                            <div class="form-group add_top_30">
 	                                <label for="fname">Nom</label>
 	                                <input type="text" name="fname" id="fname" class="form-control " onchange="getVals(this, 'fname_field');">
@@ -111,37 +110,26 @@
 								    </label>
 								</div>
 												
-	                               <div class="form-group">
-	                                    <label>Pays</label>
-	                               <!--     <label for="minimum_salary_full_time">Choose a range</label> -->
-	                                    <div class="styled-select">
-	                                        <select class="form-control " id="country" name="country">
-	                                            <option value="">Choose</option>
-	                                            <option value="Morocco">Maroc</option>
-	                                            <option value="Subs">Sub Saharien</option>
-	                                            <option value="other">Autre</option>
-	                                        </select>
-	                                    </div>
-	                                </div>
+	             
 									
 									   <div class="form-group">
 	                                    <label>Région</label>
 	                               <!--     <label for="minimum_salary_full_time">Choose a range</label> -->
 	                                    <div class="styled-select">
 	                                        <select class="form-control " id="region" name="region">
-	                                            <option value="">Choose</option>
-	                                            <option value="Morocco">Tanger-Tétouan-Al Hoceïma</option>
-	                                            <option value="Subs">L'Oriental</option>
-	                                            <option value="other">Fès-Meknès</option>
-												<option value="Morocco">Rabat-Salé-Kénitra</option>
-	                                            <option value="Subs">Béni Mellal-Khénifra</option>
-	                                            <option value="other">Casablanca-Settat</option>
-												<option value="Morocco">Marrakech-Safi</option>
-	                                            <option value="Subs">Drâa-Tafilalet</option>
-	                                            <option value="other">Souss-Massa</option>
-												<option value="Morocco">Guelmim-Oued Noun</option>
-	                                            <option value="Subs">Laâyoune-Sakia El Hamra</option>
-	                                            <option value="other">Dakhla-Oued Ed-Dahab</option>
+	                                            <option value="">Choisir</option>
+	                                            <option value="Tanger-Tétouan-Al Hoceïma">Tanger-Tétouan-Al Hoceïma</option>
+	                                            <option value="L'Oriental">L'Oriental</option>
+	                                            <option value="Fès-Meknès">Fès-Meknès</option>
+												<option value="Rabat-Salé-Kénitra">Rabat-Salé-Kénitra</option>
+	                                            <option value="Béni Mellal-Khénifra">Béni Mellal-Khénifra</option>
+	                                            <option value="Casablanca-Settat">Casablanca-Settat</option>
+												<option value="Marrakech-Safi">Marrakech-Safi</option>
+	                                            <option value="Drâa-Tafilalet">Drâa-Tafilalet</option>
+	                                            <option value="Souss-Massa">Souss-Massa</option>
+												<option value="Guelmim-Oued Noun">Guelmim-Oued Noun</option>
+	                                            <option value="Laâyoune-Sakia El Hamra">Laâyoune-Sakia El Hamra</option>
+	                                            <option value="Dakhla-Oued Ed-Dahab">Dakhla-Oued Ed-Dahab</option>
 	                                        </select>
 	                                    </div>
 	                                </div>	
@@ -150,39 +138,65 @@
 	                                <label for="city">Ville</label>
 	                                <input type="text" name="city" id="city" class="form-control">
 	                            </div>
-								<div class="form-group">
-	                                <label for="Adresse">Adresse</label>
-	                                <input type="text" name="Adresse" id="Adresse" class="form-control">
+									
+								
+									<div class="form-group">
+	                                <label>Niveau de Formation</label>
+	                                   <div class="styled-select">
+	                                        <select class="form-control" id="certification" name="certification">
+	                                            <option value="">Choisir </option>
+	                                            <option value="Niveau Bac">Niveau Bac</option>
+	                                            <option value="Bac">Bac</option>
+	                                            <option value="Bac +1">Bac +1</option>
+												<option value="Bac +2">Bac +2</option>
+	                                            <option value="Bac +3">Bac +3</option>
+												<option value="Bac +4">Bac +4</option>
+												<option value="Bac +5">Bac +5</option>
+	                                            <option value="Autre">Autre</option>
+	                                        </select>
+	                                    </div>
 	                            </div>
-								<div class="form-group">
-	                                <label for="diplome">Diplôme</label>
-	                                <input type="text" name="diplome" id="diplome" class="form-control">
-	                            </div>
+								
+								
+
+								
+										   <div class="form-group">
+	                                    <label>Spécialité</label>
+	                               <!--     <label for="minimum_salary_full_time">Choose a range</label> -->
+	                                    <div class="styled-select">
+	                                        <select class="form-control" id="diplome" name="diplome">
+	                                            <option value="">Choisir </option>
+	                                            <option value="Spécialité1">Spécialité1</option>
+	                                            <option value="Spécialité1">Spécialité1</option>
+	                                            <option value="Spécialité3">Spécialité3</option>
+												<option value="Spécialité4">Spécialité4</option>
+	                                            <option value="Spécialité5">Spécialité5</option>
+	                                            <option value="Autre">Autre</option>
+	                                        </select>
+	                                    </div>
+	                                </div>	
+							
+								
+								
 								
 								
 								
 										   <div class="form-group">
-	                                    <label>Année de diplôme</label>
+	                                    <label>Année d'obtention de diplôme</label>
 	                               <!--     <label for="minimum_salary_full_time">Choose a range</label> -->
 	                                    <div class="styled-select">
 	                                        <select class="form-control" id="graddate" name="graddate">
-	                                            <option value="">Choose</option>
-	                                            <option value="zero">2017</option>
-	                                            <option value="one">2018</option>
-	                                            <option value="two">2019</option>
-												<option value="three">2020</option>
-	                                            <option value="four">2021</option>
-	                                            <option value="five">autre</option>
+	                                            <option value="">Choisir </option>
+	                                            <option value="2017">2017</option>
+	                                            <option value="2018">2018</option>
+	                                            <option value="2019">2019</option>
+												<option value="2020">2020</option>
+	                                            <option value="2021">2021</option>
+	                                            <option value="Autre">Autre</option>
 	                                        </select>
 	                                    </div>
 	                                </div>	
-								
-								
-								
-								<div class="form-group">
-	                                <label for="certification">Formation (Certification)</label>
-	                                <input type="text" name="certification" id="certification" class="form-control">
-	                            </div>
+							
 								
 								
 										   <div class="form-group">
@@ -190,14 +204,13 @@
 	                               <!--     <label for="minimum_salary_full_time">Choose a range</label> -->
 	                                    <div class="styled-select">
 	                                        <select class="form-control" id="experience" name="experience">
-	                                            <option value="">Choose</option>
-	                                            <option value="zero">0</option>
-	                                            <option value="one">1</option>
-	                                            <option value="two">2</option>
-												<option value="three">3</option>
-	                                            <option value="four">4</option>
-	                                            <option value="five">5</option>
-												<option value="six">6 et plus</option>
+	                                            <option value="">Choisir </option>
+												<option value="0">0</option>
+	                                            <option value="Entre 1 et 3 mois">Entre 1 et 3 mois</option>
+	                                            <option value="Entre 3 et 6 mois">Entre 3 et 6 mois</option>
+	                                            <option value="Entre 6 et 12 mois">Entre 6 et 12 mois</option>
+												<option value="Entre 12 et 24 mois">Entre 12 et 24 mois</option>
+												<option value="Plus de 24 mois">Plus de 24 mois</option>
 	                                        </select>
 	                                    </div>
 	                                </div>	
@@ -206,7 +219,7 @@
 								
 								
 	                            <div class="form-group add_bottom_30 add_top_20">
-	                                <label>Upload Resume<br><small>(Files accepted: .pdf, .doc/docx - Max file size: 150KB for demo limit)</small></label>
+	                                <label>Soumettre votre CV<br><small>(Files accepted: .pdf, .doc/docx - Max file size: 3 Mb)</small></label>
 	                                <div class="fileupload" class="custom-file-upload">
 	                                    <input class="filestyle" type="file" name="fileupload" accept=".pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" class="required">
 	                                </div>
@@ -222,15 +235,15 @@
 	                            <h3 class="main_question">Etes vous a la recherche?</h3>
 	                            <div class="form-group">
 	                                <label class="container_radio version_2">D’un emploi dans un secteur en particulier
-	                                    <input type="radio" name="availability" value="work" class="required">
+	                                    <input type="radio" name="availability" value="D’un emploi dans un secteur en particulier" class="required">
 	                                    <span class="checkmark"></span>
 	                                </label>
 	                                <label class="container_radio version_2">D’une formation complémentaire qui vous permettra de trouver un emploi plus facilement
-	                                    <input type="radio" name="availability" value="training" class="required">
+	                                    <input type="radio" name="availability" value="D’une formation complémentaire qui vous permettra de trouver un emploi plus facilement" class="required">
 	                                    <span class="checkmark"></span>
 	                                </label>
 	                                <label class="container_radio version_2">D’un encadrement global dans ma recherche d’emploi
-	                                    <input type="radio" name="availability" value="encadrement" class="required">
+	                                    <input type="radio" name="availability" value="D’un encadrement global dans ma recherche d’emploi" class="required">
 	                                    <span class="checkmark"></span>
 	                                </label>
 	                            </div>
@@ -238,7 +251,7 @@
 	                        </div>
 
 	                        <!-- Looking for > work============================== -->
-	                        <div class="branch" id="work">
+	                        <div class="branch" id="D’un emploi dans un secteur en particulier">
 	                            <div class="step" data-state="end">
 	                                <h2 class="section_title">Recherche d’un emploi dans un secteur en particulier </h2>
 	                                <br>
@@ -247,15 +260,15 @@
 									   <h3 class="main_question">Depuis combien de temps êtes-vous à la recherche d’emploi ?</h3>
 	                            <div class="form-group">
 	                                <label class="container_radio version_2">Entre 1 et 6 mois
-	                                    <input type="radio" name="searchtime" value="onetosix" class="required">
+	                                    <input type="radio" name="searchtime" value="Entre 1 et 6 mois" class="required">
 	                                    <span class="checkmark"></span>
 	                                </label>
 	                                <label class="container_radio version_2">Entre 6 mois et 1 an
-	                                    <input type="radio" name="searchtime" value="sixtoone" class="required">
+	                                    <input type="radio" name="searchtime" value="Entre 6 mois et 1 an" class="required">
 	                                    <span class="checkmark"></span>
 	                                </label>
 	                                <label class="container_radio version_2">Plus d’1 an
-	                                    <input type="radio" name="searchtime" value="morethanone" class="required">
+	                                    <input type="radio" name="searchtime" value="Plus d’1 an" class="required">
 	                                    <span class="checkmark"></span>
 	                                </label>
 	                            </div>
@@ -264,16 +277,16 @@
 								
 										   <h3 class="main_question">A combien d’offres d’emploi avez vous postulé ?</h3>
 	                            <div class="form-group">
-	                                <label class="container_radio version_2">Entre 1 et 10 offres
-	                                    <input type="radio" name="offers" value="onetoten" class="required">
+	                                <label class="container_radio version_2">Entre 1 et 5 offres
+	                                    <input type="radio" name="offers" value="Entre 1 et 10 offres" class="required">
 	                                    <span class="checkmark"></span>
 	                                </label>
-	                                <label class="container_radio version_2">Entre 10 et 30 offres
-	                                    <input type="radio" name="offers" value="tentoth" class="required">
+	                                <label class="container_radio version_2">Entre 5 et 10 offres
+	                                    <input type="radio" name="offers" value="Entre 10 et 30 offres" class="required">
 	                                    <span class="checkmark"></span>
 	                                </label>
-	                                <label class="container_radio version_2">Entre 30 et 50 offres
-	                                    <input type="radio" name="offers" value="thtofif" class="required">
+	                                <label class="container_radio version_2">Plus que 10 offres
+	                                    <input type="radio" name="offers" value="Entre 30 et 50 offres" class="required">
 	                                    <span class="checkmark"></span>
 	                                </label>
 	                            </div>
@@ -283,15 +296,15 @@
 	                             	   <h3 class="main_question">Combien d’entretiens d’embauche avez-vous effectué ?</h3>
 	                            <div class="form-group">
 	                                <label class="container_radio version_2">0
-	                                    <input type="radio" name="availability" value="work" class="required">
+	                                    <input type="radio" name="entretiens" value="0" class="required">
 	                                    <span class="checkmark"></span>
 	                                </label>
-	                                <label class="container_radio version_2">Moins de 5 entretiens
-	                                    <input type="radio" name="availability" value="training" class="required">
+	                                <label class="container_radio version_2">Entre 1 et 5 entretiens
+	                                    <input type="radio" name="entretiens" value="Moins de 5 entretiens" class="required">
 	                                    <span class="checkmark"></span>
 	                                </label>
-	                                <label class="container_radio version_2">Entre 5 et 10 entretiens
-	                                    <input type="radio" name="availability" value="encadrement" class="required">
+	                                <label class="container_radio version_2">Plus de 10 entretiens
+	                                    <input type="radio" name="entretiens" value="Entre 5 et 10 entretiens" class="required">
 	                                    <span class="checkmark"></span>
 	                                </label>
 	                            </div>
@@ -305,7 +318,7 @@
 							
 	                      
 						  
-						  <div class="branch" id="training">
+						  <div class="branch" id="D’une formation complémentaire qui vous permettra de trouver un emploi plus facilement">
 	                            <div class="step" data-state="end">
 	                                <h2 class="section_title">Recherche d’une formation qui vous permettra de trouver un emploi plus facilement </h2>
 	                                <br>
@@ -314,15 +327,15 @@
 									   <h3 class="main_question">Définissez ce qui vous manque dans votre cursus actuel ?</h3>
 	                            <div class="form-group">
 	                                <label class="container_radio version_2">La reconnaissance insuffisante de vos capacités
-	                                    <input type="radio" name="cursus" value="reconnaissance" class="required">
+	                                    <input type="radio" name="cursus" value="La reconnaissance insuffisante de vos capacités" class="required">
 	                                    <span class="checkmark"></span>
 	                                </label>
 	                                <label class="container_radio version_2">Des débouchés avec un salaire insuffisant
-	                                    <input type="radio" name="cursus" value="salairein" class="required">
+	                                    <input type="radio" name="cursus" value="Des débouchés avec un salaire insuffisant" class="required">
 	                                    <span class="checkmark"></span>
 	                                </label>
 	                                <label class="container_radio version_2">Rien, c’est le désir de se réorienter
-	                                    <input type="radio" name="cursus" value="reorienter" class="required">
+	                                    <input type="radio" name="cursus" value="Rien, c’est le désir de se réorienter" class="required">
 	                                    <span class="checkmark"></span>
 	                                </label>
 	                            </div>
@@ -337,63 +350,63 @@
 	                        <!-- Looking for > encadrement ============================== -->
 							
 							
-	                  	  <div class="branch" id="encadrement">
+	                  	  <div class="branch" id="D’un encadrement global dans ma recherche d’emploi">
 	                            <div class="step" data-state="end">
 	                                <h2 class="section_title">Recherche d’un encadrement dans la recherche d’emploi </h2>
 	                                <br>
 									<br>
 														
-									   <h3 class="main_question">Si vous deviez définir la qualité de votre CV ?</h3>
-	                            <div class="form-group">
-	                                <label class="container_radio version_2">Plutôt moyenne
-	                                    <input type="radio" name="qualitycv" value="m" class="required">
-	                                    <span class="checkmark"></span>
-	                                </label>
-	                                <label class="container_radio version_2">Plutôt faible
-	                                    <input type="radio" name="qualitycv" value="f" class="required">
-	                                    <span class="checkmark"></span>
-	                                </label>
-	                                <label class="container_radio version_2">Totalement insatisfaisante
-	                                    <input type="radio" name="qualitycv" value="d" class="required">
-	                                    <span class="checkmark"></span>
-	                                </label>
-	                            </div>
 								
 								
 										   <h3 class="main_question">Avez vous un profil LinkedIn ?</h3>
 	                            <div class="form-group">
 	                                <label class="container_radio version_2">Oui 
-	                                    <input type="radio" name="profilelinkedin" value="yes" class="required">
+	                                    <input type="radio" name="profilelinkedin" value="Oui" class="required">
 	                                    <span class="checkmark"></span>
 	                                </label>
 	                                <label class="container_radio version_2">Non, mais je souhaiterais en créer
-	                                    <input type="radio" name="profilelinkedin" value="no" class="required">
+	                                    <input type="radio" name="profilelinkedin" value="Non, mais je souhaiterais en créer" class="required">
 	                                    <span class="checkmark"></span>
 	                                </label>
 	                             
 	                            </div>
+								<div class="form-group">
+	                                <label for="city">Lien profil Linkedin</label>
+	                                <input type="text" name="lienlinkedin" id="lienlinked" class="form-control">
+	                            </div>
 								
 								
-										   <h3 class="main_question">Avez vous défini votre projet professionnel ?</h3>
-	                            <div class="form-group">
-	                                <label class="container_radio version_2">Pas vraiment
-	                                    <input type="radio" name="proproject" value="pv" class="required">
+										   <h3 class="main_question">Connaissez vous les débouchés de votre diplôme  ?</h3>
+										         <div class="form-group">
+	                                <label class="container_radio version_2">Oui 
+	                                    <input type="radio" name="debouches" value="Oui" class="required">
 	                                    <span class="checkmark"></span>
 	                                </label>
-	                                <label class="container_radio version_2">Dans les grandes lignes
-	                                    <input type="radio" name="proproject" value="gl" class="required">
-	                                    <span class="checkmark"></span>
-	                                </label>
-									 <label class="container_radio version_2">J’ai une vision précise et je souhaiterai avoir les moyens de la réaliser
-	                                    <input type="radio" name="proproject" value="vp" class="required">
+	                                <label class="container_radio version_2">Non
+	                                    <input type="radio" name="debouches" value="Non" class="required">
 	                                    <span class="checkmark"></span>
 	                                </label>
 	                             
 	                            </div>
-								
-								
-								
-								
+										   
+										   
+										   
+										   
+	                    			   <div class="form-group">
+	                                    <label>Quel métier souhaitez-vous exerce ?</label>
+	                               <!--     <label for="minimum_salary_full_time">Choose a range</label> -->
+	                                    <div class="styled-select">
+	                                        <select class="form-control" id="metier" name="metier">
+	                                            <option value="">Choisir </option>
+	                                            <option value="metier1">metier1</option>
+	                                            <option value="metier2">metier2</option>
+	                                            <option value="metier3">metier3</option>
+												<option value="metier4">metier4</option>
+	                                            <option value="metier5">metier5</option>
+	                                            <option value="Autre">Autre</option>
+	                                        </select>
+	                                    </div>
+	                                </div>		
 								</div>
 								</div>
 							
